@@ -1,4 +1,5 @@
 const express = require("express");
+const open = require('open')
 
 const app = express();
 const PORT = 8080;
@@ -22,4 +23,5 @@ app.post('/edit',function(req,res) {
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
+    open('http://localhost:' + PORT)
 });

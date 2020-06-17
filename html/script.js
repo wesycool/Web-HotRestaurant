@@ -3,7 +3,7 @@ document.querySelector('#reserve').addEventListener('click', async function(){
     const bodyContent = {
         name: document.querySelector('#name').value,
         email: document.querySelector('#email').value,
-        phone:document.querySelector('#phone').value
+        phone: document.querySelector('#phone').value
     }
     
     await fetch('/edit', {
