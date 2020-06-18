@@ -9,15 +9,23 @@ const data = []
 app.use(express.json())
 app.use(express.static('html'))
 
+function checkAuthorization(req,res,next){
+    console.log( `[checkAuthorization] called ` )
+    if( req.url !== '/' ){
+      res.send("Sorry you can't go there")
+      return
+    }
+    next()
+}
 
-app.get('/data',function(req,res) {
+app.get('/data',checkAuthorization,function(req,res) {
     console.log('getting data')
     res.send(data)
 })
 
-app.post('/edit',function(req,res) {
+app.post('/addReserve',function(req,res) {
     data[data.length] = req.body
-    res.send({ status: true, message: `Cool beans, we save it for you` })
+    res.send({ status: true, message: `Reservation added` })
 })
 
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hot Restaurant</title>
+    <title>Hot Restaurant - Make a Reservation</title>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -13,19 +13,42 @@
     <script src="https://kit.fontawesome.com/ff6a322856.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <div class='container'>
         <div class='row' style="margin-top: 50px;">
             <div class='col' style="text-align: center;">
                 <h1>Hot Restaurant</h1>
             </div>
         </div>
-
+        
         <div class='row' style="margin-top: 25px;">
             <div class='col' style="text-align: center;">
                 <a href='./reserve.html' class='btn btn-danger'><i class="fas fa-user-plus"></i> Make a Reservation</a>
             </div>    
         </div>
+
+        <div class='row justify-content-center'>
+            <div class='col col-md-6' style="margin-top: 50px;">
+                <form class="row g-3">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+        
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary" id='reserveBtn'>Reserve</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
     </div>
     
 
